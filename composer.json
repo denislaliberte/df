@@ -1,6 +1,7 @@
 {
   "name": "denislaliberte/df",
   "description": "test",
+  "version": "1.0.0-dev",
   "require-dev": {
         "phpspec/phpspec": "2.0.*@dev",
         "phpspec/prophecy": "~1.0"
