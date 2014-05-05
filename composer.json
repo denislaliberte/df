@@ -1,12 +1,16 @@
 {
   "name": "tp1/drupal-framework",
-  "version": "1.0.0-dev",
+  "description": "test",
   "require-dev": {
-    "phpspec/phpspec": "2.0.*@dev",
-    "phpspec/prophecy": "~1.0"
-  },
-  "config": {
-    "bin-dir": "bin"
-  },
-    "autoload": {"psr-0": {"": "src"}}
+        "phpspec/phpspec": "2.0.*@dev",
+        "phpspec/prophecy": "~1.0"
+    },
+    "license": "gpl-v2",
+    "authors": [
+        {
+            "name": "Denis Laliberté",
+            "email": "denis@tp1.ca"
+        }
+    ],
+    "minimum-stability": "dev"
 }
