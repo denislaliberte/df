@@ -1,6 +1,6 @@
 {
   "name": "tp1/drupal-framework",
-  "version": "0.0.1-alpha",
+  "version": "1.0.0-dev",
   "require-dev": {
     "phpspec/phpspec": "2.0.*@dev",
     "phpspec/prophecy": "~1.0"
