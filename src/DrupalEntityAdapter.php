@@ -4,7 +4,7 @@ class DrupalEntityAdapter
 {
   private $DrupalEntities;
 
-  private function __construct($DrupalEntitiesWrapper) {
+  public function __construct($DrupalEntitiesWrapper) {
     $this->DrupalEntities = $DrupalEntitiesWrapper;
   }
 
@@ -16,7 +16,7 @@ class DrupalEntityAdapter
     $value = $this->DrupalEntities->$field_key->value();
     return !is_null($value)? $value : "";
   }
-  public function get_image_url($image_field_value){
-    return isset($image_field_value['uri'])? file_create_url($image_field_value['uri']):"";
-  }
+//  public function get_image_url($image_field_value){
+//    return isset($image_field_value['uri'])? file_create_url($image_field_value['uri']):"";
+//  }
 }

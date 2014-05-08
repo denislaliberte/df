@@ -5,7 +5,7 @@ class FieldsProcessorImageDecorator implements FieldsProcessorInterface {
   private $field_image_key;
   private $file_adapter;
 
-  public function __construct(FieldsProcessor $fields_processor,DrupalFileAdapter $file_adapter, array $field_image_key){
+  public function __construct(FieldsProcessorInterface $fields_processor,DrupalFileAdapter $file_adapter, array $field_image_key){
     $this->fields_processor = $fields_processor;
     $this->file_adapter = $file_adapter;
     $this->field_image_key = $field_image_key;
