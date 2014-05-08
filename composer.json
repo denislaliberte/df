@@ -6,7 +6,7 @@
         "phpspec/phpspec": "2.0.*@dev",
         "phpspec/prophecy": "~1.0"
     },
-    "license": "gpl-v2",
+    "license": "GPL-2.0",
     "authors": [
         {
             "name": "Denis Laliberté",
