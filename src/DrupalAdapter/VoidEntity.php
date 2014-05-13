@@ -1,6 +1,7 @@
 <?php
+namespace DrupalAdapter;
 
-class DrupalEntityVoidAdapter
+class VoidEntity
 {
   public function get_field_value($field_key) {
     return "";

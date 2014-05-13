@@ -1,6 +1,6 @@
 <?php
 
-namespace tp1;
+namespace HookHelper;
 
 class GenerateThemeHook
 {

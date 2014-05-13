@@ -1,11 +1,17 @@
 <?php
 
-class FieldsProcessorImageDecorator implements FieldsProcessorInterface {
+namespace FieldsProcessor;
+
+use DrupalAdapter\FileSystem;
+
+
+
+class ImageDecorator implements FieldsProcessorInterface {
   private $fields_processor;
   private $field_image_key;
   private $file_adapter;
 
-  public function __construct(FieldsProcessorInterface $fields_processor,DrupalFileAdapter $file_adapter, array $field_image_key){
+  public function __construct(FieldsProcessorInterface $fields_processor,FileSystem $file_adapter, array $field_image_key){
     $this->fields_processor = $fields_processor;
     $this->file_adapter = $file_adapter;
     $this->field_image_key = $field_image_key;

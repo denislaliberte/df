@@ -1,21 +1,25 @@
 <?php
-namespace spec;
+namespace spec\FieldsProcessor;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Prophecy\Prophet;
 
-class FieldsProcessorImageDecoratorSpec extends ObjectBehavior
+use DrupalAdapter\FileSystem;
+
+use FieldsProcessor\FieldsProcessor;
+
+class ImageDecoratorSpec extends ObjectBehavior
 {
   function it_is_initializable($fields_processor,$file_adapter) {
     $this->beConstructedWith($fields_processor,$file_adapter,array('field_advisor_picture'));
-    $this->shouldHaveType('FieldsProcessorImageDecorator');
-    $this->shouldImplement('FieldsProcessorInterface');
+    $this->shouldHaveType('FieldsProcessor\ImageDecorator');
+    $this->shouldImplement('FieldsProcessor\FieldsProcessorInterface');
   }
 
   function let($fields_processor,$file_adapter) {
-    $fields_processor->beADoubleOf('FieldsProcessor');
-    $file_adapter->beADoubleOf('DrupalFileAdapter');
+    $fields_processor->beADoubleOf('FieldsProcessor\FieldsProcessor');
+    $file_adapter->beADoubleOf('DrupalAdapter\FileSystem');
   }
 
   function it_add_image_file_path_to_variables($fields_processor,$file_adapter) {

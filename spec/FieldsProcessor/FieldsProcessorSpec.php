@@ -1,20 +1,22 @@
 <?php
-namespace spec;
+namespace spec\FieldsProcessor;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Prophecy\Prophet;
 
+use DrupalAdapter\Entity;
+
 class FieldsProcessorSpec extends ObjectBehavior {
 
   function it_is_initializable($wrapper) {
     $this->beConstructedWith($wrapper,array());
-    $this->shouldHaveType('FieldsProcessor');
-    $this->shouldImplement('FieldsProcessorInterface');
+    $this->shouldHaveType('FieldsProcessor\FieldsProcessor');
+    $this->shouldImplement('FieldsProcessor\FieldsProcessorInterface');
   }
 
   function let($wrapper) {
-    $wrapper->beADoubleOf('DrupalEntityAdapter');
+    $wrapper->beADoubleOf('DrupalAdapter\Entity');
   }
 
   function it_process_variables($wrapper) {

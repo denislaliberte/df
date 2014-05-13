@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\tp1;
+namespace spec\HookHelper;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -9,7 +9,7 @@ class GenerateThemeHookSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('tp1\GenerateThemeHook');
+        $this->shouldHaveType('HookHelper\GenerateThemeHook');
     }
     function let(){
         $this->beConstructedWith('theme_folder');

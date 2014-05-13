@@ -1,8 +1,17 @@
 <?php 
 
-abstract class FieldsProcessorFactoryAbstract implements FieldsProcessorFactoryInterface {
+namespace FieldsProcessor;
+
+use DrupalAdapter\Entity;
+use DrupalAdapter\VoidEntity;
+use DrupalAdapter\FileSystem;
+
+use FieldsProcessor\FactoryInterface;
+
+
+abstract class FactoryAbstract implements FactoryInterface {
   protected $file_adapter;
-  public function __construct(DrupalFileAdapter $file_adapter){
+  public function __construct(FileSystem $file_adapter){
     $this->file_adapter = $file_adapter;
   }
 
@@ -15,13 +24,13 @@ abstract class FieldsProcessorFactoryAbstract implements FieldsProcessorFactoryI
   {
     if(is_object($node)){
       $wrapper = entity_metadata_wrapper($type, $node);
-      $adapter = new DrupalEntityAdapter($wrapper);
+      $adapter = new Entity($wrapper);
     }
     else{
-      $adapter = new DrupalEntityVoidAdapter();
+      $adapter = new VoidEntity();
     }
     return $adapter;
   }
-  abstract function get_fields_processor(array $node_array,DrupalEntityAdapter $entity);
+  abstract function get_fields_processor(Entity $entity);
 
 }

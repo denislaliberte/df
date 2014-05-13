@@ -4,6 +4,7 @@ namespace spec;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
+use DrupalAdapter\Entity;
 
 class FieldsProcessorTermDecoratorSpec extends ObjectBehavior
 {
@@ -16,7 +17,7 @@ class FieldsProcessorTermDecoratorSpec extends ObjectBehavior
       $field_value = array('field_taxonomy'=>$tax_stub);
       $fields_processor->process_fields()->willReturn($field_value);
 
-      $entity_adaptor->beADoubleOf('DrupalEntityAdapter');
+      $entity_adaptor->beADoubleOf('DrupalAdapter\Entity');
       $entity_adaptor->get_field_value('name')->willReturn('tax_class');
 
       $factory->beADoubleOf('FieldsProcessorFactory');

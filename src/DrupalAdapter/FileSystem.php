@@ -1,6 +1,8 @@
 <?php
 
-class DrupalFileAdapter {
+namespace DrupalAdapter;
+
+class FileSystem {
 
   public function get_image_url_callback(){
     $get_iamge_url = function ($image_field_value){

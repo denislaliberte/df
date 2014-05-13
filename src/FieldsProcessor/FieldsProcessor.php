@@ -1,10 +1,14 @@
 <?php
 
+namespace FieldsProcessor;
+
+use DrupalAdapter\Entity;
+
 class FieldsProcessor implements FieldsProcessorInterface {
   private $entity;
   private $field_key;
 
-  public function __construct(DrupalEntityAdapter $drupal_entity, array $field_key) {
+  public function __construct(Entity $drupal_entity, array $field_key) {
     $this->entity = $drupal_entity;
     $this->field_key = $field_key;
   }

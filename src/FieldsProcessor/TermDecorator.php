@@ -1,11 +1,14 @@
 <?php
 
-class FieldsProcessorTermDecorator implements FieldsProcessorInterface
+namespace FieldsProcessor;
+use FieldsProcessor\FactoryInterface;
+
+class TermDecorator implements FieldsProcessorInterface
 {
     private $fields_processor;
     private $key;
     private $factory;
-    public function __construct(FieldsProcessorInterface $fields_processor,FieldsProcessorFactoryInterface $factory,$key){
+    public function __construct(FieldsProcessorInterface $fields_processor,FactoryInterface $factory,$key){
       $this->fields_processor = $fields_processor;
       $this->key = $key;
       $this->factory = $factory;
